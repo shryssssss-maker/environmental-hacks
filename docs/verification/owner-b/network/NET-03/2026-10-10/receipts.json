@@ -1,0 +1,105 @@
+{
+  "check_id": "NET-03",
+  "issue": 215,
+  "region": "ap-south-1",
+  "integration_build": {
+    "source_commit": "8a4a6278ab9f4918d0747128e70def45a2f4bf02",
+    "source_tree": "87d26fb04d748370cea4b4b4c3de2717862e2ca8",
+    "archive_sha256": "36f3ccfcbe55d777ae97f6706a58a4d4f6f51217febaaa0cbf11a0275786d257",
+    "code_sha256_base64": "NvPM/L5V13eul/Zwalik1Pb1Ehf+uqoMvxGgJ1eG0lc=",
+    "package_lock_sha256": "157c77be469ec044a593fe2e2bd53a60ee04c19b91288f86d1de1f38e1a34582",
+    "working_tree_uncommitted": false
+  },
+  "build_reference": "owner-b-network-build-v2-2026-10-10",
+  "transport": "authenticated signer -> conditional S3 PUT -> versioned S3 event -> published Lambda -> EventBridge -> hub -> DynamoDB readback",
+  "synthetic_case_count": 6,
+  "production_workload_confirmed": false,
+  "hub_verified_means": "Contract validation and persistence only; capture origin is retained.",
+  "cases": [
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-01-ready",
+      "status": "completed",
+      "finding_count": 1,
+      "input_sha256": "37ba1fe6aa68f4c305ae64cc39d9a8e8010a28f5391ea55b5166b2463770a310",
+      "pair_sha256": "8fbe4853b9fbec62d432f965d22c494470ac7d605fb966b843692f1c3107c6ef",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-02-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "ca86bf2a8688a890d379ace0477dbfabd5b46c01f5c75e40423344e6aaf0fe58",
+      "pair_sha256": "7f09366e885d3e185b29de0dd627be60f4e4019e688406ba6783b6a47b3f475d",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-03-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "8457df4bdcf7abdc192202ca4fc5fc3661f8472d7cae9b9b16a540f5b3492f8a",
+      "pair_sha256": "3262d893614858d7b9ee1353c438789bfee4dd0a5b89b4c261d771271f41d6c7",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-04-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "c7ab175008a45beee831fb23a427bbed321371076ae77476f5083799c3408014",
+      "pair_sha256": "713e43d3322ad4ac26a46e232e8c795683736d3ee61a8a5006591fa70e2565e6",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-05-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "1dc19686eb9db9f17404909b4da12c840bd3de3731c518c07a028309e7418581",
+      "pair_sha256": "7b195875c22f8d20b6e65b1c7aec7f7dc78a7173a23482f004787cb257006c6f",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-03",
+      "scan_id": "aws-network-2026-10-10-net-03-06-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "00f2d67c260486857f95992f7c78550cbfdde8dec78d81bfded9e5bc43402270",
+      "pair_sha256": "70883a5774cafc4b8f8816fdbc51863c0467c6d05b1c2f55849a8c6769c259ad",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    }
+  ],
+  "live_acquisition": [
+    {
+      "provider": "cloudwatch",
+      "check_id": "NET-03",
+      "status": "unavailable",
+      "finding_count": 0,
+      "persisted": true,
+      "reason": "route:catalog: Acquisition incomplete or unavailable: Missing metric samples; not zero",
+      "pair_sha256": "316738af4b37a032480cc29bd5e5ea7277c8e2ab4359c990f42bae1457027e0f",
+      "production_workload_confirmed": false
+    }
+  ],
+  "initial_transport_attempt": "Uploads immediately after notification update had no readback. Fresh uploads after propagation passed; failed attempt is not acceptance evidence."
+}
