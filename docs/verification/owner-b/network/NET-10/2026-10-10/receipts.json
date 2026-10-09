@@ -1,0 +1,106 @@
+{
+  "check_id": "NET-10",
+  "issue": 222,
+  "region": "ap-south-1",
+  "integration_build": {
+    "source_commit": "8a4a6278ab9f4918d0747128e70def45a2f4bf02",
+    "source_tree": "87d26fb04d748370cea4b4b4c3de2717862e2ca8",
+    "archive_sha256": "36f3ccfcbe55d777ae97f6706a58a4d4f6f51217febaaa0cbf11a0275786d257",
+    "code_sha256_base64": "NvPM/L5V13eul/Zwalik1Pb1Ehf+uqoMvxGgJ1eG0lc=",
+    "package_lock_sha256": "157c77be469ec044a593fe2e2bd53a60ee04c19b91288f86d1de1f38e1a34582",
+    "working_tree_uncommitted": false
+  },
+  "build_reference": "owner-b-network-build-v2-2026-10-10",
+  "transport": "authenticated signer -> conditional S3 PUT -> versioned S3 event -> published Lambda -> EventBridge -> hub -> DynamoDB readback",
+  "synthetic_case_count": 6,
+  "production_workload_confirmed": false,
+  "hub_verified_means": "Contract validation and persistence only; capture origin is retained.",
+  "cases": [
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-01-ready",
+      "status": "completed",
+      "finding_count": 1,
+      "input_sha256": "467e3450c7089e879d90ff444c77046a6323f1d0eb9dde25a097d2df17da6d7d",
+      "pair_sha256": "f63b1097d6e308836e40d01453a8c0ba26eace8e3cd2a221b757fb5a69382515",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-02-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "15d59294ca3ec40b347dd626fbfa14731f08cf8431f79078d06322a23be9b2bb",
+      "pair_sha256": "8608885742ecc1d09da9445c4b0a8f15e540aea468e84b73d2427c64923c2590",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-03-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "53e4ec4590b9c50efaac6d5b4b6ecc5a4835e7ce185d25690ca764471f79a58d",
+      "pair_sha256": "8064b37b8a29e78361379eb82a92ab6a15442de777a60344e5a6d5b9e8b294fe",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-04-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "06f9d5447b0cf2f94fcfb19bf75400f0e2b93bc75e8bf0b2ec4151941073c1a1",
+      "pair_sha256": "705bd3157c8acd04236fd91f66e0cb6c0afeb97abdffd94ff2ce48b68fe2e4e5",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-05-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "827b4673cbf3174305256e1f962ca71304444dbfc4646b48f2dcbae794aa9f76",
+      "pair_sha256": "ae1405773316c3d140282b42f2d23685d8a0ecb4d2cc22744d5679edc51cf344",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-net-10-06-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "5b02e0f3f63ddb0aa2c079f78c816a32d7928f478da51320c5e89592490b0ee7",
+      "pair_sha256": "9dc689bcc1dffc3bc5c907c661a55267be54e6d7999ef40e18c32a1205318f15",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-10",
+      "scan_id": "aws-network-2026-10-10-measured-net-10-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "b3e5515006b308d32a42fcbaa211e3dc2662d5605db188622e8b5bf122dfd0b8",
+      "pair_sha256": "4efbd7190a688c571e2154d1c90094455512b26963e3cc51c7cbcf31a9c40816",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "auditor",
+      "production_workload_confirmed": false
+    }
+  ],
+  "live_acquisition": [],
+  "initial_transport_attempt": "Uploads immediately after notification update had no readback. Fresh uploads after propagation passed; failed attempt is not acceptance evidence."
+}
