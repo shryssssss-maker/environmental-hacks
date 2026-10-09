@@ -1,0 +1,105 @@
+{
+  "check_id": "NET-12",
+  "issue": 224,
+  "region": "ap-south-1",
+  "integration_build": {
+    "source_commit": "8a4a6278ab9f4918d0747128e70def45a2f4bf02",
+    "source_tree": "87d26fb04d748370cea4b4b4c3de2717862e2ca8",
+    "archive_sha256": "36f3ccfcbe55d777ae97f6706a58a4d4f6f51217febaaa0cbf11a0275786d257",
+    "code_sha256_base64": "NvPM/L5V13eul/Zwalik1Pb1Ehf+uqoMvxGgJ1eG0lc=",
+    "package_lock_sha256": "157c77be469ec044a593fe2e2bd53a60ee04c19b91288f86d1de1f38e1a34582",
+    "working_tree_uncommitted": false
+  },
+  "build_reference": "owner-b-network-build-v2-2026-10-10",
+  "transport": "authenticated signer -> conditional S3 PUT -> versioned S3 event -> published Lambda -> EventBridge -> hub -> DynamoDB readback",
+  "synthetic_case_count": 6,
+  "production_workload_confirmed": false,
+  "hub_verified_means": "Contract validation and persistence only; capture origin is retained.",
+  "cases": [
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-01-ready",
+      "status": "completed",
+      "finding_count": 1,
+      "input_sha256": "25122e666511c740f061da8143fa0ca3cc6c22df65a5efd44af8b48816f4b59c",
+      "pair_sha256": "5b609bc69ccea37ffc96072d52c24922fc2480dd5aad10b39efe415d61cabd27",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-02-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "4c8967e6cca5c52ee66c0451ae7785e47e75dbb43dbf1b944fd6f6e82ad0abf5",
+      "pair_sha256": "c0d9e08f6edfb7b9047879c963914b87fd52b2c3ecb08e0063ee5e7b5fab6328",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-03-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "a4f24d236e55fb8dd221bb4b84d05e25c8f2c583362ab252930a461cee22f082",
+      "pair_sha256": "a3c5d1f79838079e20ac358f05f8137d5e6a243e473c87f18b0da5e3150998ee",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-04-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "c094d89b258b1392657418cb3151889be599eeef3b6809379fcce91ccc7683f0",
+      "pair_sha256": "38249d8e04b06b3ff77b756498812ba4c88ae3df0613ed8d9be16beb56179636",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-05-ready",
+      "status": "unavailable",
+      "finding_count": 0,
+      "input_sha256": "922de385422e507cf052ff3ea20b561839c4a632669be84fc99fb06638ed9a92",
+      "pair_sha256": "48b4083ee53fdf15e6c4434aebc2f398fb90b4778e6816c3dbd8ab9914334887",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    },
+    {
+      "check_id": "NET-12",
+      "scan_id": "aws-network-2026-10-10-net-12-06-ready",
+      "status": "completed",
+      "finding_count": 0,
+      "input_sha256": "3d38711dbf043e549ce7eb1b25e5c8441283e1a4a958895e76139a8ebf926754",
+      "pair_sha256": "9f5dfff243f1202d8710470e501acac5cff036806dd7fefae99eb0a031c1f6db",
+      "persisted": true,
+      "evidence": "verified",
+      "capture_origin": "synthetic",
+      "production_workload_confirmed": false
+    }
+  ],
+  "live_acquisition": [
+    {
+      "provider": "cloudwatch-logs",
+      "check_id": "NET-12",
+      "status": "unavailable",
+      "finding_count": 0,
+      "persisted": true,
+      "reason": "route:catalog: Acquisition incomplete or unavailable: Missing/ambiguous normalized log capture",
+      "pair_sha256": "1665a2d893303ad34ad602a9cb16f680e6c93087b117f6ca399eb42920c62ae5",
+      "production_workload_confirmed": false
+    }
+  ],
+  "initial_transport_attempt": "Uploads immediately after notification update had no readback. Fresh uploads after propagation passed; failed attempt is not acceptance evidence."
+}
